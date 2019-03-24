@@ -1,7 +1,13 @@
+/*
+font-family: 'Baloo Chettan', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 .main{
@@ -9,23 +15,23 @@
     grid-template-columns: minmax(350px, 1fr);
     grid-template-areas: "background"
                          "info";
-    grid-gap: 15px;
     justify-content: center;
 }
 
 .header{
     display: flex;
     position: fixed;
-    background: rgba(0, 0, 0, 0.7);
+    background: black;
     width: 100%;
     height: 8vh;
     align-items: center;
 }
 .menu-bar{
+    display: block;
     font-size: 8vw;
     color: #fff;
     text-decoration: none;
-    margin: 2%;
+    margin: 0.3em;
     padding: 2%;
 }
 .menu-item-cont{
@@ -44,16 +50,57 @@
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 2px 2px 10px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-title{
+    font-size: 15vw;
+    color: rgb(235, 235, 235);
+    text-shadow: 5px 5px 10px black;
 }
 .information{
+    background: rgb(240, 240, 240);
     width: 100%;
     grid-area: info;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.info-widget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em;
+}
 .widget-img{
+    display: block;
+    margin: .5em;
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    box-shadow: 2px 2px 2px grey;
+}
+.widget-title{
+    font-size: 8vw;
+}
+.widget-desc{
+    text-align: justify;
+    margin: .5em;
+    font-size: 5vw;
+}
+.widget-btn{
+    display: block;
+    margin: .5em;
+    padding: 4%;
+    width: 150px;
+    height: auto;
+    background: rgb(228, 116, 12);
+    font-size: 6vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(167, 85, 10);
 }
