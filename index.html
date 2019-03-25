@@ -17,7 +17,7 @@
         <!--Header-->
         <div class="header">
             <div class="menu">
-                <a href="#" class="menu-bar"><i class="fas fa-bars"></i></a>
+                <a href="#" class="menu-bar" id="menu-bar"><i class="fas fa-bars"></i></a>
                 <div class="menu-item-cont">
                     <a href="#" class="menu-item">Home</a>
                     <a href="#" class="menu-item">Menu</a>
@@ -26,19 +26,30 @@
             </div>
          </div>
         <!--Menú responsive-->
-        <div class="menu-resp">
+        <div class="menu-resp" id="resp">
             <div class="menu-resp-cont">
                 <a href="#" class="resp-item">Home</a>
                 <a href="#" class="resp-item">Menu</a>
                 <a href="#" class="resp-item">Contact</a>
             </div>
-        </div>
 
+            <div class="add-info-resp">
+                <h4 class="add-title">Additional Information</h4>
+                <p class="add-desc">
+                    Phone: 555-555-555 <br>
+                    Direction: Cl xx #xx-xx <br>
+                    Email: example@mail.com
+                </p>
+            </div>
+        </div>
+        
+        <!--Background-->
         <div class="background">
             <h1 class="back-title">Fabriccio</h1>
         </div>
 
         <!--Secciones-->
+        <!--Information-->
         <div class="information">
             <div class="info-widget">
                 <img src="img/widget-1.jpg" class="widget-img">
@@ -64,6 +75,58 @@
                 <a href="#" class="widget-btn">Button 2</a>
             </div>
         </div>
+
+        <!--About Us-->
+        <div class="about-us">
+            <h2 class="about-title">About Us</h2>
+            <p class="aboutdesc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores dolorum 
+                tenetur maiores veritatis eius, deserunt eum necessitatibus delectus sequi 
+                fugiat inventore. Nostrum sequi sunt impedit eligendi possimus totam nam!
+            </p>
+
+            <div class="services">
+                <h3 class="serv-title">Our Services</h3>
+                <div class="serv-list">
+                    <a href="#" class="serv-icon">
+                        <i class="fas fa-utensils"></i>
+                        <div class="icon-desc">Menu</div>
+                    </a>
+                    <a href="#" class="serv-icon">
+                        <i class="fas fa-bicycle"></i> <br>
+                        <div class="icon-desc">Domicile</div>
+                    </a>
+                    <a href="#" class="serv-icon">
+                        <i class="fas fa-dollar-sign"></i> <br>
+                        <div class="icon-desc">Offers</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Contact us-->
+        <div class="contact-us">
+            <form class="form">
+                <h3 class="cont-title">Please contact us</h3>
+
+                <label for="name" class="label-in">Name</label>
+                <input type="text" id="name" placeholder="Your name" class="input-field">
+
+                <label for="email" class="label-in">Email</label>
+                <input type="email" id="email" placeholder="Your email" class="input-field">
+
+                <label for="subject" class="label-in">Subject</label>
+                <input type="text" id="subject" placeholder="Subject" class="input-field">
+
+                <label for="message" class="label-in">Message</label>
+                <textarea id="message" cols="30" rows="10" class="input-field"></textarea>
+
+                <input type="submit" value="Send" class="btn-send">
+            </form>
+        </div>
     </div>
+
+    <!--Scripts-->
+    <script src="scripts/menu_bar.js"></script>
 </body>
 </html>
