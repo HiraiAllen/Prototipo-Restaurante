@@ -3,35 +3,36 @@ font-family: 'Baloo Chettan', cursive;
 font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
-*{
-    margin: 0;
-    padding: 0;
+*{    
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
 .main{
-    display: grid;
-    grid-template-columns: minmax(350px, 1fr);
+    display: grid;    
     grid-template-areas: "background"
                          "info";
     justify-content: center;
 }
 
-.header{
-    display: flex;
+.header{    
     position: fixed;
     background: black;
     width: 100%;
-    height: 8vh;
+    height: 50px;
+    max-height: 8vh;
     align-items: center;
 }
-.menu-bar{
-    display: block;
-    font-size: 8vw;
+.menu-bar{    
+    font-size: 7vh;
     color: #fff;
-    text-decoration: none;
-    margin: 0.3em;
+    text-decoration: none;    
     padding: 2%;
 }
 .menu-item-cont{
@@ -41,11 +42,8 @@ font-family: 'Poppins', sans-serif;
     display: none;
 }
 .background{
-    grid-area: background;
-    min-width: 350px;
-    max-width: 1440px;
-    width: 100%;
-    height: 70vh;
+    grid-area: background;            
+    max-height: 70vh;        
     background-image: url("../img/brick-wall-1834784_1920.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -53,54 +51,69 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
 }
 .back-title{
     font-size: 15vw;
     color: rgb(235, 235, 235);
     text-shadow: 5px 5px 10px black;
+    text-align: center;
 }
 .information{
-    background: rgb(240, 240, 240);
-    width: 100%;
+    background: rgb(240, 240, 240);    
     grid-area: info;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: center;
 }
 .info-widget{
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: center;
+    height: 100%;
     margin: .5em;
 }
 .widget-img{
-    display: block;
-    margin: .5em;
-    width: 250px;
-    height: 250px;
+    display: block;    
+    width: 10em;
+    height: 10em;
     border-radius: 50%;
     box-shadow: 2px 2px 2px grey;
+    object-fit: cover;
 }
 .widget-title{
-    font-size: 8vw;
+    font-size: 2em;
+    text-align: center;
 }
 .widget-desc{
+    width: 100%;
     text-align: justify;
-    margin: .5em;
-    font-size: 5vw;
+    margin:0;
+    padding: .5em;
+    font-size: 1.3em;
 }
-.widget-btn{
-    display: block;
-    margin: .5em;
+.widget-btn{    
     padding: 4%;
-    width: 150px;
-    height: auto;
+    width: 50%;    
     background: rgb(228, 116, 12);
-    font-size: 6vw;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
     text-align: center;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgb(167, 85, 10);
+}
+
+@media (min-width:728px) and (orientation:landscape){
+    .information{
+        flex-flow: row nowrap;  
+        justify-content: center;
+        align-items: stretch;             
+        align-content: stretch; 
+    }
+    .info-widget{        
+        flex: 0 1 auto;
+        align-self: auto;
+    }
 }
