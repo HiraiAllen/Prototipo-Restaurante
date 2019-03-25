@@ -20,7 +20,8 @@ html,body{
     grid-template-areas: "background"
                          "info"
                          "about"
-                         "contact";
+                         "contact"
+                         "footer";
     justify-content: center;
 }
 
@@ -253,4 +254,40 @@ html,body{
     font-size: 1.2em;
     box-shadow: 1px 1px 6px grey;
     border-radius: 5px;
+}
+.footer{
+    width: 100%;
+    grid-area: footer;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px rgb(165, 85, 10) solid;
+}
+.foot-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.foot-info-title{
+    color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+}
+.foot-info-desc{
+    color: #fff;
+    text-align: center;
+    font-size: .9em;
+}
+.foot-menu{
+    display: flex;
+    justify-content: center;
+}
+.foot-item{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin: .8em 0 .8em 0;
 }
